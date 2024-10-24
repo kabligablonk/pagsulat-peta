@@ -322,8 +322,11 @@ body {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+    flex: 1;
     align-items: center;
     text-align: center;
+    max-width: 600px;
+    min-width: 400px;
 }
 
 .cv_skl h1, .ab_skl h1, .ag_skl h1 {
@@ -354,6 +357,16 @@ body {
 
 .cv_skl h1:hover::after, .ab_skl h1:hover::after, .ag_skl h1:hover::after {
     transform: scaleX(1);
+}
+
+.cv_skl p, .ab_skl p, .ag_skl p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .abstrak {
@@ -461,3 +474,35 @@ body {
     transform: scaleX(1);
 }
 
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.hover-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hover-box ul li {
+    padding: 5px 0;
+    font-family: "Lato", sans-serif;
+    color: #182d42;
+}
+
+.button-container:hover .hover-box {
+    display: block;
+}

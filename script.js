@@ -7,7 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToProjectsButton = document.getElementById('scrollToProjects');
     const scrollLine = document.getElementById('scrollLine');
     const projectTitles = document.querySelectorAll('.project-title');
-    
+    const hoverBox = document.querySelector('.hover-box');
+    const hoverBoxItems = hoverBox.querySelectorAll('li');
+
+    hoverBoxItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.querySelector(`.${targetId}`);
+            if (targetSection) {
+                const scrollTarget = targetSection.getBoundingClientRect().top + window.pageYOffset - 100;
+                window.scrollTo({
+                    top: scrollTarget,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
     // Video related code
     if (video) {
