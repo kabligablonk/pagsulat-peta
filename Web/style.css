@@ -139,11 +139,12 @@ body {
 }
 
 .portfolio {
-    position: absolute;
+    position: absolute;  /* Change from absolute to relative */
     top: 200px; 
     left: calc(5% + 600px);
     padding: 0;
     margin: 0;
+    z-index: 10;  /* Add this to ensure it's above other elements */
 }
 
 .portfolio_title h1{
@@ -366,3 +367,85 @@ body {
     width: 80%;
     margin-top: 200px;
 }
+
+#scrollButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #182d42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    transition: background-color 0.3s ease;
+}
+
+#scrollButton:hover {
+    background-color: #0a1a2a;
+}
+
+#scrollLine {
+    position: fixed;
+    top: 0;
+    left: 50px; /* Adjust this value as needed */
+    width: 2px;
+    height: 0;
+    background-color: #0a1a2a;
+    z-index: 1000;
+    transition: height 0.1s ease-out;
+    transition: opacity 0.3s ease-out, height 0.1s ease-out;
+}
+
+#scrollLine::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0a1a2a;
+    top: var(--circle-position, 0);
+    transition: top 0.1s ease-out;
+}
+
+#scrollToProjects {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #182d42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#scrollToProjects:hover {
+    background-color: #0a1a2a;
+}
+
+.project-title {
+    position: relative;
+    display: inline-block;
+}
+
+.project-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #182d42;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project-title:hover::after {
+    transform: scaleX(1);
+}
+
