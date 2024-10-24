@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/3977891868_721039999_223132457.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_1654713014_1281918868.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_1704852926_4253074836.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_271746287_2273787675.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_3441958866_265424251.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_1829922487_333057825.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_442189330_2675404984.mp4'
-file 'file:C:/Users/aeggn/OneDrive/Desktop/Project/media/videos/scene/1080p60/partial_movie_files/CreateCircle/2852726489_1704852926_1071484169.mp4'
