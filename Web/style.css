@@ -6,24 +6,28 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom right, #f8f9fa, #e0f7fa); 
+    background-image: linear-gradient(to bottom right, #f8f9fa, #e0f7fa, #b3e5fc);
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
 }
 
-.header{
-    width: 100%;
-    height: 70px;
-    display: block;
-    background: linear-gradient(to right, #0a1a2a, #182d42);
-    position: fixed;
-    top: 0;
-    width: 100%;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0px 1px 4px #333333;
+    background: linear-gradient(to right, #0a1a2a, #182d42);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .header.hidden {
@@ -43,7 +47,6 @@ body {
     height: 100%;
     display: table;
     float: left;
-
 }
 
 .home h1{
@@ -55,7 +58,6 @@ body {
     color: #f5f5f5;
     font-size: 24px;
 }
-
 
 .navigation {
     float: right;
@@ -75,6 +77,11 @@ body {
     vertical-align: middle;
     font-family: 'Playfair Display', serif;
     color: #f5f5f5;
+    transition: color 0.3s ease;
+}
+
+.navigation a li:hover {
+    color: #b3e5fc;
 }
 
 .video_opener{
@@ -116,6 +123,12 @@ body {
     top: 125px;
     left: 8%; 
     box-shadow: 0px 1px 4px #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .box img {
@@ -147,143 +160,209 @@ body {
     color: #333333;
 }
 
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #0a1a2a;
-    color: #f5f5f5;
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
-    font-weight: 400;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 80px;
-    margin-left: 15px;
-}
-
 .bionote {
     position: absolute;
     top: 1100px;
     left: 8%; 
     width: 84%; 
     padding: 40px;
-    background-color: #f5f5f59c; 
+    background-color: rgba(245, 245, 245, 0.8);
     border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.pangalan h1{
+.bionote:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.details {
+    display: contents;
+}
+
+.pangalan, .edukasyon, .trabaho, .parangal {
+    padding: 10px;
+}
+
+.pangalan {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.edukasyon {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.trabaho {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.parangal {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.pangalan h1, .edukasyon h1, .trabaho h1, .parangal h1 {
     font-family: "Playfair Display", serif;
     font-size: 30px;
     font-weight: 10;
-}
-
-.pangalan h2{
-    font-family: "Lato", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    margin-left: 25px;
-    margin-top: 2px;
     color: #333333;
     margin-bottom: 10px;
 }
 
-.edukasyon h1{
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    margin-left: 253px;
-    font-weight: 10;
-    color: #333333;
-}
-
-.edukasyon h2{
+.pangalan h2, .edukasyon h2, .trabaho h2, .parangal h2 {
     font-family: "Lato", sans-serif;
     font-size: 20px;
     font-weight: 300;
-    margin-left: 288px;
-    margin-top: 2px;
     color: #333333;
+    margin-left: 25px;
 }
 
-.details{
+.csa_logo {
+    grid-column: 3;
+    grid-row: 1 / span 2;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
-.trabaho h1{
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    font-weight: 10;
-    color: #333333;
-    margin-top: 10px;
-}
-
-.trabaho h2{
-    font-family: "Lato", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    margin-left: 25px;
-    margin-top: 2px;
-    color: #333333;
-}
-
-.parangal h1{
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    font-weight: 10;
-    color: #333333;
-    margin-top: 10px;
-}
-
-.parangal h2{
-    font-family: "Lato", sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    margin-left: 25px;
-    margin-top: 2px;
-    color: #333333;
-}
-
-.csa_logo{
-    vertical-align: middle;
-    margin-left: 50%;
-    margin-top: -25%;
+.csa_logo img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
 }
 
 .curriculum_vitae {
     display: flex;
-    flex-direction: column; /* Stack the title first, then the content */
+    flex-direction: column;
     position: absolute;
     top: 2000px;
     left: 10%;
-    width: 80%; /* Adjust the width of the entire section */
+    width: 80%;
 }
 
-.cv_content {
+.cv_content, .ab_content, .ag_content {
     display: flex;
-    flex-direction: row; /* Align the PDF and #SKL side by side */
-    justify-content: space-between; /* Add space between PDF and #SKL */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
-    margin-top: 20px; /* Add some spacing below the title */
+    margin-top: 20px;
 }
 
-.cv {
-    flex-basis: 70%; /* Set the width for the PDF embed */
-    padding-right: 20px;
+.cv, .ab, .ag {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.cv_skl {
-    flex-basis: 30%; /* Set the width for the #SKL section */
+.cv embed, .ab embed, .ag embed {
+    width: 75%;
+    height: 700px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.cv embed:hover, .ab embed:hover, .ag embed:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cv_title h1, .ab_title h1, .ag_title h1 {
     font-family: "Playfair Display", serif;
-    font-weight: 10;
+    color: #182d42;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
 }
 
 .cv_title h1 {
-    font-family: "Playfair Display", serif;
-    color: #333333;
-    font-weight: 10;
-    padding-bottom: 10px;
+    text-align: left;
 }
 
+.ab_title h1 {
+    text-align: right;
+}
+
+.ag_title h1 {
+    text-align: left;
+}
+
+.cv_title h1::after, .ab_title h1::after, .ag_title h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #182d42;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.cv_title h1:hover::after, .ab_title h1:hover::after, .ag_title h1:hover::after {
+    transform: scaleX(1);
+}
+
+.cv_skl, .ab_skl, .ag_skl {
+    flex-basis: 30%;
+    font-family: "Playfair Display", serif;
+    font-weight: 10;
+    padding-left: 20px;
+}
+
+.cv_skl h1, .ab_skl h1, .ag_skl h1 {
+    color: #182d42;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.cv_skl h1::after, .ab_skl h1::after, .ag_skl h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -5px;
+    left: 25%;
+    background-color: #182d42;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.cv_skl h1:hover::after, .ab_skl h1:hover::after, .ag_skl h1:hover::after {
+    transform: scaleX(1);
+}
+
+.abstrak {
+    position: absolute;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    top: 2800px;
+    left: 10%;
+    width: 80%;
+}
+
+.ab {
+    align-items: flex-end;
+}
+
+.Agenda {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3800px;
+    left: 10%;
+    width: 80%;
+    margin-top: 200px;
+}

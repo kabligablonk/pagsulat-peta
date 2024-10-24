@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('scroll_video');
     const videoContainer = document.querySelector('.video_opener');
-    const websiteContent = document.querySelector('.website_content');
+    const websiteContent = document.querySelector('.content');
+    const clickMeButton = document.getElementById('scrollToBionote');
+    const bionoteSection = document.querySelector('.bionote');
 
     // Preload the video
     video.preload = 'auto';
@@ -19,19 +21,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Play the video and transition to the website content when it ends
     video.addEventListener('ended', () => {
         videoContainer.classList.add('hidden');
-        websiteContent.classList.remove('hidden');
+        websiteContent.style.display = 'block';
     });
 
     // Automatically play the video when the page loads
     video.play();
 
-    // Add this script to the bottom of your HTML file or include it in a separate JavaScript file
+    // Add scroll event listener for header
     window.addEventListener('scroll', function() {
         var header = document.querySelector('.header');
-        if (window.scrollY > 0) {
+        if (window.scrollY > 100) {
             header.classList.add('hidden');
         } else {
             header.classList.remove('hidden');
         }
     });
+
+    // Add click event listener for the "click me" button
+    if (clickMeButton) {
+        clickMeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (bionoteSection) {
+                bionoteSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.error('Bionote section not found');
+            }
+        });
+    } else {
+        console.error('Click me button not found');
+    }
 });
