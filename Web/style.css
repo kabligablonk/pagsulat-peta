@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #f8f9fa, #e0f7fa); 
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    display: block;
+    background: linear-gradient(to right, #0a1a2a, #182d42);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 1px 4px #333333;
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.inner_header{ 
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    padding: 0px 60px;
+}
+
+.home {
+    height: 100%;
+    display: table;
+    float: left;
+
+}
+
+.home h1{
+    height: 100%;
+    display: table-cell;
+    font-family: 'Playfair Display', serif;
+    vertical-align: middle;
+    font-weight: 10;
+    color: #f5f5f5;
+    font-size: 24px;
+}
+
+
+.navigation {
+    float: right;
+    height: 100%;
+    padding: 0px 150px;
+}
+
+.navigation a{
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Playfair Display', serif;
+    color: #f5f5f5;
+}
+
+.video_opener{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.video_opener.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#scroll_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding-top: 100vh;
+    min-height: 100vh;
+}
+
+.box {
+    border: 5px solid #000;
+    overflow: hidden;
+    border-radius: 50px 0px 50px 0px;
+    width: 400px;
+    height: 650px;
+    position: absolute;
+    top: 125px;
+    left: 8%; 
+    box-shadow: 0px 1px 4px #333333;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: 38% 20%; 
+}
+
+.portfolio {
+    position: absolute;
+    top: 200px; 
+    left: calc(5% + 600px);
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio_title h1{
+    font-family: "Playfair Display", serif;
+    font-size: 75px;
+    font-weight: 420;
+    color: #333333;
+}
+
+.name, h2{
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0a1a2a;
+    color: #f5f5f5;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+.bionote {
+    position: absolute;
+    top: 1100px;
+    left: 8%; 
+    width: 84%; 
+    padding: 40px;
+    background-color: #f5f5f59c; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pangalan h1{
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 10;
+}
+
+.pangalan h2{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 25px;
+    margin-top: 2px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.edukasyon h1{
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-left: 253px;
+    font-weight: 10;
+    color: #333333;
+}
+
+.edukasyon h2{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 288px;
+    margin-top: 2px;
+    color: #333333;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trabaho h1{
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 10;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.trabaho h2{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 25px;
+    margin-top: 2px;
+    color: #333333;
+}
+
+.parangal h1{
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 10;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.parangal h2{
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 25px;
+    margin-top: 2px;
+    color: #333333;
+}
+
+.csa_logo{
+    vertical-align: middle;
+    margin-left: 50%;
+    margin-top: -25%;
+}
+
+.curriculum_vitae {
+    display: flex;
+    flex-direction: column; /* Stack the title first, then the content */
+    position: absolute;
+    top: 2000px;
+    left: 10%;
+    width: 80%; /* Adjust the width of the entire section */
+}
+
+.cv_content {
+    display: flex;
+    flex-direction: row; /* Align the PDF and #SKL side by side */
+    justify-content: space-between; /* Add space between PDF and #SKL */
+    align-items: flex-start;
+    margin-top: 20px; /* Add some spacing below the title */
+}
+
+.cv {
+    flex-basis: 70%; /* Set the width for the PDF embed */
+    padding-right: 20px;
+}
+
+.cv_skl {
+    flex-basis: 30%; /* Set the width for the #SKL section */
+    font-family: "Playfair Display", serif;
+    font-weight: 10;
+}
+
+.cv_title h1 {
+    font-family: "Playfair Display", serif;
+    color: #333333;
+    font-weight: 10;
+    padding-bottom: 10px;
+}
+
